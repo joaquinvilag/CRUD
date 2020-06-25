@@ -1,0 +1,26 @@
+<%- include('partials/head') %>
+
+<%- include('partials/header') %>
+  
+  
+<h1>Todas las pelis</h1>
+            
+<section>
+         
+    <% for (let i = 0; i < peliculas.length; i++) { %>
+        <article class="product">
+            
+            <div class="desc">
+                <h2 class="productTitle"><%= peliculas[i].title %></h2>                              
+            </div>
+            <a class="btn btn-info" type="button" href="/peliculas/<%= peliculas[i].id %>" role="button">Más información</a>
+            
+        </article>
+        <% }; %>
+        
+</section>
+  
+<%- include('partials/footer') %>
+
+
+<!-- <table> -->
